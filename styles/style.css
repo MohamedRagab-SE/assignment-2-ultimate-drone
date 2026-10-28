@@ -1,0 +1,1289 @@
+/* ########################################################################                             *NOTE - Global classes ########################################################################
+*/
+
+:root {
+    --link-color: #7F64FE;
+    --bg-span-Common-color: #8E51FF;
+    --main-font: Arial, Helvetica, sans-serif;
+    --main-font-color: #333333;
+    --secound-font-color:#FFFFFF;
+    --key-card-resolution-color: #6B4EA0;
+    --key-card-description-color: #777789;
+}
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0px;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+    /* *NOTE - to prevent the small space under any image */
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    /* *NOTE - to prevent the space that list style made */
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+
+.f-justify-content {
+    justify-content: center;
+}
+
+.f-align-items {
+    align-items: center;
+}
+
+.fx-space-between {
+    justify-content: space-between;
+}
+
+.fy-space-between {
+    align-content: space-between;
+}
+
+.fy-flex-start {
+    align-items: flex-start;
+    /* *NOTE - to remove the gap in the top of span(content-heading) */
+}
+
+.fx-flex-start {
+    justify-content: flex-start;
+
+}
+
+.fx-start-end {
+    justify-content: flex-end;
+}
+
+.fy-flow {
+    flex-flow: column;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+.m-auto {
+    margin-inline: auto;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+
+/* ########################################################################                             *NOTE - Nav-Bar ########################################################################
+*/
+
+.nav-container {
+    background-color: #F5F3FF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.nav-bar {
+    /* background-color: rebeccapurple; */
+    padding: 10px 20px;
+
+}
+
+/* ------------*NOTE - Nav-bar Left ------------*/
+.navbar-l {
+    /* background-color: red; */
+    gap: 10px;
+}
+
+div.navbar-l img,
+.social-logo img {
+    width: 40px;
+    height: 40px;
+    /* *NOTE - We increased the width cause of box size that make padding from the content  */
+    background-color: var(--bg-span-Common-color);
+    border-radius: 8px;
+    padding: 10px;
+
+}
+
+div.navbar-l span {
+    font-weight: bolder;
+    font-family: var(--main-font);
+    font-size: 24px;
+    color: var(--main-font-color);
+
+}
+
+
+/* ------------*NOTE - Nav-bar Right ------------*/
+.navbar-r {
+    /* background-color: yellow; */
+}
+
+div.navbar-r ul {
+    gap: 30px;
+}
+
+div.navbar-r ul li a {
+    font-size: 16px;
+    font-family: var(--main-font);
+    transition: 0.5s;
+
+
+}
+
+div.navbar-r ul li a:hover {
+    color: var(--link-color);
+    /* *NOTE - border-bottom: 2px solid  #7F64FE; not able to use border cause it will effect the width of content */
+}
+
+#home-link a {
+    /* *NOTE - We used id to give home link the priority by spicificity  */
+    color: var(--link-color);
+    border-bottom: 2px solid var(--link-color);
+
+}
+
+.line {
+
+    height: 2px;
+    width: 0;
+    transition: width 0.6s;
+
+}
+
+div.navbar-r ul li:hover .line {
+    /* *NOTE - moving the line according to parent or i must hover on line under to make it work not the li  */
+    width: 100%;
+    background-color: var(--link-color);
+
+}
+
+
+
+
+/* ########################################################################                             *NOTE -Hero Section ########################################################################
+*/
+.wrapper {
+    background-color: var(--secound-font-color);
+    min-height: 100vh;
+}
+
+.hero-section {
+    /* background-color: aqua; */
+}
+
+.inner {
+    /* background-color: #8E51FF; */
+    /* gap: 30px; */
+}
+
+/* ------------*NOTE -Hero - Img ------------*/
+.hero-img {
+    /* background-color: blue; */
+    /* border: 2px solid rgb(0, 0, 0, 0.3); */
+    /* border-radius: 20px; */
+    width: 48%;
+    position: relative;
+}
+
+div.hero-img img {
+    border: 2px solid rgb(0, 0, 0, 0.3);
+    padding: 20px;
+    width: 100%;
+    border-radius: 40px;
+}
+
+div.hero-img span {
+    background-color: var(--bg-span-Common-color);
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--secound-font-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+
+/* ------------*NOTE -Hero - Content ------------*/
+.hero-content {
+    /* background-color: yellow; */
+    width: 48%;
+    gap: 0px;
+
+}
+
+.content-heading {
+    /* background-color: aqua; */
+    gap: 20px;
+
+
+}
+
+.content-heading span {
+    background-color: var(--bg-span-Common-color);
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--secound-font-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    opacity: 0.8;
+
+}
+
+/* ------------*00000000000 ------------*/
+.hero-content .content-text h1 {
+    font-family: var(--main-font);
+    font-weight: bolder;
+    font-size: 48px;
+    margin: 0;
+    color: var(--main-font-color);
+}
+
+.hero-content .content-text h1 span {
+    color: var(--bg-span-Common-color);
+    color: var(--main-font-color);
+}
+
+.hero-content .content-text p {
+    font-family: var(--main-font);
+    font-size: 20px;
+}
+
+/* ------------*00000000000 ------------*/
+.content-price {
+    /* background-color: aqua; */
+    gap: 20px;
+
+}
+
+.content-price p {
+    font-size: 16px;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+
+
+}
+
+.new-price {
+    font-family: var(--main-font);
+    font-weight: bolder;
+    font-size: 36px;
+    color: var(--main-font-color);
+}
+
+.old-price {
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    font-size: 24px;
+    text-decoration: line-through;
+}
+
+.discount-value {
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 14px;
+    border: 1px solid #FFE2E2;
+    padding: 4px 8px;
+    border-radius: 15px;
+    color: #E7000B;
+    background-color: #FFE2E2;
+}
+
+/* ------------*00000000000 ------------*/
+.hero-btn {
+    /* background-color: chartreuse; */
+    gap: 10px;
+    /* margin-top:70px; */
+
+}
+
+div .hero-btn button {
+    width: 100%;
+    gap: 10px;
+    border-radius: 30px;
+    padding: 20PX 90PX;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.btn-cart {
+    background-color: var(--bg-span-Common-color);
+    border: none;
+}
+
+.btn-wishlist {
+    background-color: #F0F0F0;
+    border: 1px solid rgb(0, 0, 0, 0.3);
+    color: var(--main-font-color);
+}
+
+.hero-btn .btn-cart img,
+.hero-btn .btn-wishlist img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.hero-btn span {
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.btn-cart span {
+    color:  var(--secound-font-color);
+}
+
+.btn-wishlist span {
+    color: var(--main-font-color);
+}
+
+.btn-cart:hover,
+.btn-wishlist:hover {
+    transform: scale(1.05);
+}
+
+/* ########################################################################                             *NOTE - Key Features Section ########################################################################*/
+
+.keyFeatures-wrapper {
+    background-color: #F7F5FF;
+    min-height: 100vh;
+    padding-top: 80PX;
+
+}
+
+.keyFeatures-container {
+    /* background-color: red; */
+    padding: 0px 24px;
+
+
+}
+
+.key-section {
+    /* background-color: yellow; */
+    gap: 50px
+}
+
+/* ###############*NOTE features&reviews&products heading- ################*/
+
+.key-section-content {
+    /* background-color: green; */
+
+}
+
+.key-section-content h2,
+.reviews-header h2,
+.products-header h2 {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+}
+
+.key-section-content h2 span,
+.reviews-header h2 span,
+.products-header span {
+    color: var(--bg-span-Common-color);
+}
+
+.key-section-content p,
+.reviews-header p,
+.products-header p {
+    font-size: 20px;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+}
+
+/* ###############*NOTE  img cards - ################*/
+
+.key-card {
+    /* background-color: #E7000B; */
+    gap: 20px;
+
+}
+
+.key-card .card {
+    background-color:  var(--secound-font-color);
+    border-radius: 20px;
+    padding: 30px;
+    gap: 10px;
+    /* width: 31.33333%; */
+    width: calc((100% - 40px) / 3);
+    transition: 0.7s;
+}
+
+.key-card .card:hover {
+    transform: translateY(-10px);
+}
+
+.key-card .card img {
+    width: 50px;
+    height: 50px;
+    /* *NOTE - We increased the width cause of box size that make padding from the content  */
+}
+
+.key-card .card h3 {
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 24px;
+    color: var(--main-font-color);
+    margin: 0;
+}
+
+.key-card .card p {
+    font-family: var(--main-font);
+    font-size: 16px;
+    color: var(--main-font-color);
+    margin: 0;
+    border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+}
+
+.card .resolution {
+    color: var(--key-card-resolution-color);
+    font-size: 25px;
+    font-weight: 900;
+    font-family: var(--main-font);
+}
+
+.card .description {
+    color: var(--key-card-description-color);
+    font-size: 14px;
+    font-family: var(--main-font);
+
+}
+
+/* *NOTE - img-1 ----------------------------- */
+.card .card-img-1 img {
+    background-color: #EDE9FE;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card .card-img-1 span {
+    display: block;
+    padding-top: 20px;
+    color: var(--bg-span-Common-color);
+    font-size: 14px;
+    font-family: var(--main-font);
+    font-weight: bold;
+
+}
+
+/* *NOTE - img-2 ----------------------------- */
+.card .card-img-2 img {
+    background-color: rgb(0, 184, 219, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card .card-img-2 span {
+    display: block;
+    padding-top: 20px;
+    color: #0092B8;
+    font-size: 14px;
+    font-family: var(--main-font);
+    font-weight: bold;
+
+}
+
+/* *NOTE - img-3 ----------------------------- */
+.card .card-img-3 img {
+    background-color: #D0FAE5;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card .card-img-3 span {
+    display: block;
+    padding-top: 20px;
+    color: #009966;
+    font-size: 14px;
+    font-family: var(--main-font);
+    font-weight: bold;
+
+}
+
+/* *NOTE - img-4 ----------------------------- */
+.card .card-img-4 img {
+    background-color: #FFEDD4;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card .card-img-4 span {
+    display: block;
+    padding-top: 20px;
+    color: #F54A00;
+    font-size: 14px;
+    font-family: var(--main-font);
+    font-weight: bold;
+
+}
+
+/* *NOTE - img-5 ----------------------------- */
+.card .card-img-5 img {
+    background-color: #DFF2FE;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card .card-img-5 span {
+    display: block;
+    padding-top: 20px;
+    color: #0084D1;
+    font-size: 14px;
+    font-family: var(--main-font);
+    font-weight: bold;
+
+}
+
+/* *NOTE - img-6 ----------------------------- */
+.card .card-img-6 img {
+    background-color: #FFE4E6;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card .card-img-6 span {
+    display: block;
+    padding-top: 20px;
+    color: #EC003F;
+    font-size: 14px;
+    font-family: var(--main-font);
+    font-weight: bold;
+
+}
+
+
+/* ###############*NOTE Footer of key features- ############*/
+.key-section-footer {
+    /* background-color: red; */
+    padding: 40px;
+}
+
+.footer-content {
+    background-color: #7F22FE;
+    padding-inline: 20PX;
+    width: 100%;
+    border-radius: 30px;
+    margin-bottom: 100px;
+}
+
+/* ###############*NOTE Footer left content- ###*/
+.footer-content .l-content {
+    /* background-color: #0084D1; */
+    font-family: var(--main-font);
+    width: 60%;
+    /* *NOTE - you must put width to able to use x/y values with flex */
+    padding: 20px;
+}
+
+.footer-content .l-content .bold-p {
+    font-size: 16px;
+    color: #DDD6FF;
+    font-weight: bold;
+}
+
+.footer-content .l-content p {
+    font-size: 16px;
+    color: #E6E9FE;
+}
+
+.footer-content .l-content h3 {
+    font-size: 30px;
+    color:  var(--secound-font-color);
+
+}
+
+/* ###############*NOTE Footer right content- ###*/
+.footer-content .r-content {
+    /* background-color:#F5F3FF; */
+    /* border-radius: 40px; */
+    width: 30%;
+    /* border: 4px solid black; */
+}
+
+.r-content-btn {
+    gap: 10px;
+    padding: 20px 25px;
+    border-radius: 50px;
+    background-color: #F5F3FF;
+}
+
+.footer-content .r-content a {
+    color: #7008E7;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.footer-content .r-content img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ########################################################################                             *NOTE - Reviews Section ########################################################################*/
+.reviews-container {
+    /* background-color: red; */
+    /* padding: 10px 0px; */
+}
+
+.reviews-section {
+    /* background-color: #0092B8; */
+}
+
+.reviews-header {
+    /* background-color: yellow; */
+    padding: 30px 0;
+}
+
+/* ###############*NOTE  reviews-content- ###*/
+.reviews-content {
+    /* background-color: green; */
+    gap: 40px;
+    padding: 50px;
+}
+
+/* ###############*NOTE  reviews-rate- ###*/
+.rate {
+    /* background-color: #E7000B; */
+    width: calc(30% - 12px);
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 30px;
+    align-self: flex-start;
+    position: sticky;
+    /* to not make the rate-card streach  */
+    top: 80px;
+}
+
+.rate-card {
+    /* border: 5px solid rgb(50, 166, 21); */
+    padding: 40px;
+
+}
+
+.rate-card h3 {
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 60px;
+    color: var(--main-font-color);
+    margin: 0;
+}
+
+.rate-card p {
+    font-family: var(--main-font);
+    font-size: 16px;
+    color: var(--main-font-color);
+
+}
+
+
+/* ###############*NOTE  stars sec- ###*/
+.rate-card .stars {
+    /* background-color: #0084D1; */
+    gap: 10px;
+}
+
+.stars img {
+    width: 25px;
+    height: 25px;
+}
+
+/* ###############*NOTE  rate-reviews sec-2 ###*/
+.rate-reviews {
+    /* border: 5px solid rgb(198, 30, 207); */
+    padding-bottom: 30px;
+}
+
+/* ###############*NOTE  rate-reviews card ###*/
+
+.rate-reviews .review-card {
+    /* border: 5px solid rgb(18, 17, 18); */
+    gap: 10px;
+    padding-bottom: 5px;
+
+}
+
+.review-card .review-card-content {
+    width: 10%;
+    gap: 5PX;
+}
+
+.rate-reviews .review-card .review-card-content img {
+    width: 10px;
+    height: 10px;
+}
+
+.rate-reviews .review-card .review-card-content span {
+    color: var(--main-font-color);
+    font-size: 14PX;
+}
+
+.rate-reviews .review-card span {
+    color: var(--main-font-color);
+    font-size: 14PX;
+    width: 10%;
+}
+
+.rate-reviews .outborder {
+    /* border: 3px solid rgb(21, 182, 179); */
+    height: 10px;
+    background-color: #E5E7EB;
+    border-radius: 10px;
+    width: 70%;
+}
+
+/* ###############*NOTE  rate-reviews card 5stars ###*/
+.outborder .inside-border-5 {
+    /* border: 3px solid rgb(14, 12, 13); */
+    height: 10px;
+    width: 78%;
+    background-color: #F0B100;
+    border-radius: 10px;
+}
+
+/* ###############*NOTE  rate-reviews card 4stars ###*/
+.outborder .inside-border-4 {
+    /* border: 3px solid rgb(14, 12, 13); */
+    height: 10px;
+    width: 15%;
+    background-color: #F0B100;
+    border-radius: 10px;
+}
+
+/* ###############*NOTE  rate-reviews card 3stars ###*/
+.outborder .inside-border-3 {
+    /* border: 3px solid rgb(14, 12, 13); */
+    height: 10px;
+    width: 5%;
+    background-color: #F0B100;
+    border-radius: 10px;
+}
+
+/* ###############*NOTE  rate-reviews card 2stars ###*/
+.outborder .inside-border-2 {
+    /* border: 3px solid rgb(14, 12, 13); */
+    height: 10px;
+    width: 1.5%;
+    background-color: #F0B100;
+    border-radius: 10px;
+}
+
+/* ###############*NOTE  rate-reviews card 1star ###*/
+.outborder .inside-border-2 {
+    /* border: 3px solid rgb(14, 12, 13); */
+    height: 10px;
+    width: 0.5%;
+    background-color: #F0B100;
+    border-radius: 10px;
+}
+
+/* ###############*NOTE  rate-reviews card rate summary ###*/
+.rate-summary {
+    /* background-color: #0009b8; */
+    border-top: rgb(0, 0, 0, 0.1) 1px solid;
+    padding-top: 30px;
+}
+
+.rate-summary span {
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.rate-summary p {
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    font-size: 14px;
+}
+
+.recommend {
+    /* border: #abba0a 3px solid; */
+
+}
+
+.quality {
+    /* border: #c90050 3px solid; */
+}
+
+
+/* ###############*NOTE  reviews-comments- ###*/
+.comments {
+    /* background-color: rgb(16, 156, 18); */
+    /* height: 200px; */
+    width: calc(70% - 28px);
+}
+
+.comments button {
+    font-size: 16px;
+    font-family: var(--main-font);
+    font-weight: bold;
+    color: var(--secound-font-color);
+    background-color: #7F22FE;
+    border: 1px #7F22FE solid;
+    padding: 20px 30px;
+    border-radius: 30px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.comments button:hover {
+    background-color: var(--secound-font-color);
+    color: #7F22FE;
+}
+
+.comment-card {
+    border: rgb(0, 0, 0, 0.2) 1px solid;
+    padding: 40px 30px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+
+}
+
+.comment-content {
+
+    /* border: #09c512 3px solid; */
+}
+
+.comment-content p {
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    font-size: 18px;
+}
+
+.comment-head {
+
+    /* border: #d6220a 3px solid; */
+}
+
+/* ###############*NOTE  reviews-comments-profile ###*/
+
+.comment-profile {
+
+    /* border: #151414 3px solid; */
+    gap: 10px;
+
+}
+
+.comment-profile img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--bg-span-Common-color);
+    border-radius: 25px;
+}
+
+.comment-info {
+
+    /* border: #7ac48f 3px solid; */
+
+}
+
+.comment-info h4 {
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-font-color);
+    margin: 5px 0 0 0;
+
+}
+
+.comment-info p {
+    font-family: var(--main-font);
+    font-size: 16px;
+    color: var(--main-font-color);
+    margin: 5px 0 0 0;
+    padding-bottom: 5px;
+}
+
+.comment-info .comment-rate {
+    gap: 5px;
+}
+
+div.comment-info .comment-rate img {
+    width: 15px;
+    height: 15px;
+    border: none;
+}
+
+div.comment-info .comment-rate span {
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    font-size: 14px;
+}
+
+
+/* ###############*NOTE  reviews-comments-time ###*/
+
+
+.comment-time {
+
+    /* border: #b4bc0b 3px solid; */
+
+}
+
+.comment-time span {
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 12px;
+    color: var(--bg-span-Common-color);
+    border: #EDE9FE solid 3px;
+    padding: 2px;
+    background-color: #EDE9FE;
+    border-radius: 30px;
+}
+
+.comment-time p {
+    font-family: var(--main-font);
+    font-size: 14px;
+    color: var(--main-font-color);
+    margin: 7px 0 0 20px;
+}
+
+
+
+
+/* ########################################################################                             *NOTE - Related Products Section  ########################################################################*/
+.products-wrapper {
+    background-color: #F7F5FF;
+    min-height: 100vh;
+    padding-top: 80px;
+}
+
+.products-container {
+    /* background-color: #F54A00; */
+}
+
+.products-section {
+    /* background-color: aqua; */
+}
+
+/* ###############*NOTE  products-content- ###*/
+.products {
+    /* background-color: #EC003F; */
+    gap: 20px;
+
+
+}
+
+.products-header {
+    margin-bottom: 60px;
+}
+
+.product-card {
+    /* background-color: #7008E7; */
+    border: 1px solid rgb(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+    width: calc((100% - 60px) / 4)
+}
+
+/* ###############*NOTE  shared classes- ###*/
+.product-card .card-img {
+    /* border: 5px solid rgb(118, 67, 67); */
+    /* border-radius: 20px; */
+    position: relative;
+}
+
+.product-card .card-img img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.8s;
+    /* border: 5px solid rgb(151, 25, 25); */
+}
+
+.product-card .card-img span {
+    padding: 5px 15px;
+    border-radius: 15px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-family: var(--main-font);
+    font-size: 14px;
+    color: var(--secound-font-color);
+
+}
+
+.product-card h3 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+
+}
+
+.product-card p {
+    font-size: 16px;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+
+}
+
+.card-price {
+    /* background-color: #EC003F; */
+    /* border: 1px solid rgb(0, 0, 0); */
+    padding-bottom: 15px;
+
+}
+
+.card-price span {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+}
+
+.card-price button {
+    font-size: 16px;
+    font-family: var(--main-font);
+    color: var(--main-font-color);
+    border: none;
+    border-radius: 30px;
+    padding: 10px;
+    background-color: var(--bg-span-Common-color);
+    color: var(--secound-font-color);
+    cursor: pointer;
+}
+
+/* ###############*NOTE  span classes- ###*/
+.span-1 {
+    color: #D6FDFF;
+    background-color: #00BBA7;
+}
+
+.span-2 {
+    color: #D6FDFF;
+    background-color: #00C950;
+}
+
+.span-3 {
+    color: #D6FDFF;
+    background-color: #00B8DB;
+}
+
+.span-4 {
+    color: #D6FDFF;
+    background-color: #FF6900;
+}
+
+/* ###############*NOTE  img hover- ###*/
+.product-card .card-img img:hover {
+    transform: scale(1.05);
+}
+
+/* ###############*NOTE  Product-BTN- ###*/
+.product-btn {
+    margin: 30px 0;
+    width: 100%;
+    /* *NOTE - 100 cause ther eno other lements and by giving it a flex we must give it a width */
+}
+
+.product-btn button {
+    font-size: 16px;
+    font-family: var(--main-font);
+    font-weight: bold;
+    color: #7F22FE;
+    border: 1px #7F22FE solid;
+    padding: 20px 40px;
+    border-radius: 30px;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+.product-btn button:hover {
+    background-color: #7F22FE;
+    color: var(--secound-font-color);
+
+}
+
+
+/* ########################################################################                             *NOTE - Footer Section  ########################################################################*/
+.footer-wrapper {
+    min-height: 50vh;
+    background-color: #101828;
+}
+
+.footer-container {
+    /* border: 5px solid red; */
+    /* margin-top: 30px; */
+    padding: 20px;
+
+}
+
+.footer-section {
+    /* border: 5px solid rgb(46, 170, 141); */
+    margin-top: 30px;
+
+
+
+
+}
+
+/* ######################*NOTE top -------------------- */
+.footer-top-content {
+    /* border: 5px solid rgb(162, 198, 16); */
+}
+
+.social-card {
+    /* background-color: #821414; */
+    /* border: 5px solid rgb(15, 6, 181); */
+    width: calc(25% - 14px);
+    /* padding: 10px; */
+}
+
+/* ######################*NOTE card 1---------------- */
+
+.social-logo {
+    gap: 5px;
+    /* padding: 10px; */
+}
+
+/* .social-logo img{
+    taking the same style as the img in nav bar 
+}    */
+
+.social-logo span {
+    font-weight: bold;
+    font-family: var(--main-font);
+    font-size: 24px;
+    color:  var(--secound-font-color);
+}
+
+.social-card p {
+
+    font-family: var(--main-font);
+    font-size: 16px;
+    color:  var(--secound-font-color);
+}
+
+.social-img {
+    gap: 20px;
+    /* border: 5px solid rgb(15, 6, 181); */
+}
+
+.social-card .social-img img {
+    width: calc(20% - 7.5px);
+    border-radius: 15px;
+    background-color: #1E2939;
+    padding: 15px;
+    transition: 0.6s;
+}
+
+.social-card .social-img .facebook:hover {
+    background-color: #1877F2;
+    cursor: pointer;
+}
+
+.social-card .social-img .twitter:hover {
+    background-color: #1DA1F2;
+    cursor: pointer;
+}
+
+.social-card .social-img .instagram:hover {
+    background-color: #E4405F;
+    cursor: pointer;
+}
+
+.social-card .social-img .youtube:hover {
+    background-color: #FF0000;
+    cursor: pointer;
+}
+
+/* ######################*NOTE card 2 ----> 4 ---------------- */
+.info-card {
+    width: calc(25% - 14px);
+    /* border: 5px solid rgb(6, 152, 181); */
+}
+
+.info-card h3 {
+    font-family: var(--main-font);
+    font-weight: bold;
+    font-size: 18px;
+    color:  var(--secound-font-color);
+}
+
+.span-title {
+    gap: 20px;
+}
+
+.info-card .span-title span {
+    color: #f8fbff82;
+    font-family: var(--main-font);
+    font-size: 16px;
+    transition: 0.6s;
+}
+
+.info-card .span-title span:hover {
+    color:  var(--secound-font-color);
+    cursor: pointer;
+}
+
+/* ######################*NOTE bottom -------------------- */
+.footer-bottom-content {
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+    margin-top: 50px;
+    padding-top: 50px;
+}
+
+.footer-bottom-content p {
+    font-family: var(--main-font);
+    font-size: 14px;
+    color:  var(--secound-font-color);
+    /* margin: 0; */
+}
+
+.pay-method {
+    width: 48%;
+    gap: 10px;
+    /* border: 5px solid rgb(181, 159, 15); */
+}
+
+.pay-method img {
+    width: 80px;
+    border-radius: 10px;
+    background-color: var(--secound-font-color);
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.pay-method .masterCard {
+    width: 50px;
+    border-radius: 10px;
+    background-color: var(--secound-font-color);
+    padding: 10px;
+}
